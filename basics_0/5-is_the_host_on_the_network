@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #Write a script that pings an IP address
-if [ $# -ne 1 ]; then
+ipaddress=$1
+if [ -z "$ipaddress" ]
+then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-    exit 1
+else
+    ping -c 5 "$ipaddress"
 fi
-ping "$1" -c5
+
