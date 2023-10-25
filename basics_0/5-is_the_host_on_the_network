@@ -5,3 +5,4 @@ while [ $counter -le 5]
 do
 ping $1
 ((counter++))
+done
