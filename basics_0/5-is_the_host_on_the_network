@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Bash script
-counter=1
-while [ $counter -le 5] 
-do
-ping "$1"
-((counter++))
-done
+if [ -z "$1" ]; then
+echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+exit 1
+fi
+ping -c "$1"
