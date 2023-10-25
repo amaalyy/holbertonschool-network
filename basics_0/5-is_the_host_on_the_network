@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Write a script that pings an IP address
+#retrieve the ip_address from args so it's gonna be the argument 1 and then we check if it is null we print error msg otherwise ping the ip_address 5 times
 ipaddress=$1
 if [ -z "$ipaddress" ]
 then
@@ -7,4 +7,3 @@ then
 else
     ping -c 5 "$ipaddress"
 fi
-
